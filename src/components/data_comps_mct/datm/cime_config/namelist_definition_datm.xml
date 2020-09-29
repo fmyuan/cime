@@ -3148,6 +3148,7 @@
       <value stream="co2tseries.SSP">extend</value>
       <value datm_mode="CLM1PT">extend</value>
       <value atm_grid="CLM_USRDAT">cycle</value>
+      <value atm_grid="ELM_USRDAT">cycle</value>
     </values>
   </entry>
 
