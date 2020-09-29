@@ -3146,7 +3146,10 @@
       <value stream="co2tseries.20tr">extend</value>
       <value stream="co2tseries.omip">extend</value>
       <value stream="co2tseries.SSP">extend</value>
-      <value datm_mode="CLM1PT">extend</value>
+      <!--value datm_mode="CLM1PT">extend</value--> <!-- This will read ONLY first-time value of meteorological forcing series -->
+      <value datm_mode="CLM1PT">cycle</value>
+      <value datm_mode="CLM1PT" stream="presaero.clim_1850">extend</value>
+      <value datm_mode="CLM1PT" stream="topo.observed">extend</value>
       <value atm_grid="CLM_USRDAT">cycle</value>
       <value atm_grid="ELM_USRDAT">cycle</value>
     </values>
