@@ -4998,6 +4998,11 @@ DEFFCFLAGS="-g"
 
 #####################################################
 # CHECK COMPILER NAME and add specific flags
+if echo $FC | grep mpi >/dev/null 2>&1; then
+   MPIFC=`eval $FC -show`
+   FC="$(cut -d' ' -f1 <<<"$MPIFC")"
+fi
+echo "Actual compiler is: $FC"
 if echo $FC | grep xlf >/dev/null 2>&1; then
    echo "Fortran Compiler is XLF"
    CPRDEF="XLF"
